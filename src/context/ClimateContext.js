@@ -9,9 +9,10 @@ export const useClimate = () => React.useContext(ClimateContext);
 
 function ClimateProvider(props) {
     const [temperature, setTemperature] = React.useState(50);
+    const [humidity, setHumidity] = React.useState(40);
 
     return (
-        <ClimateContext.Provider value={{temperature, setTemperature}}>
+        <ClimateContext.Provider value={{temperature, setTemperature, humidity, setHumidity}}>
             {props.children}
         </ClimateContext.Provider>
     );
